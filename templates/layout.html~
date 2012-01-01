@@ -1,0 +1,193 @@
+<!doctype html>
+<html>
+<head>
+    	<title>Twitterpocalypse</title>
+    	<style>
+		@font-face {
+                font-family: 'Gill Sans MT Ext Condensed';
+                src: url(/static/GLSNECB.TTF);
+		}
+
+		@font-face {
+                font-family: 'Gill Sans MT Condensed';
+                src: url(/static/GILC____.TTF);
+		}
+
+
+		
+		html{
+			background-color:#292929;
+			font-family:'Gill Sans MT Condensed', Helvetica, sans-serif;
+			color: #a7adb1;
+			font-size:22px;
+			height:100%;
+			margin:0px;
+			padding:0px;
+		}
+		body{
+			margin:0px;
+			padding:0px;
+			height:100%;
+			width:100%;
+		}
+		h1{
+			font-family: 'Gill Sans MT Ext Condensed', Arial, sans-serif;
+			font-size:82px;
+			font-style:regular;
+		}
+		h2{
+			font-family: 'Gill Sans MT Ext Condensed', Arial, sans-serif;
+			font-size:72px;
+			font-style:regular;
+			margin:0;
+		}
+		h4{
+			font-family: 'Gill Sans MT Condensed', Arial, sans-serif;
+			font-size:33px;
+			font-style:regular;
+			margin-top:-8px;
+			margin-bottom:10px;
+		}
+		#mainbox{
+			padding:40px;
+			width:760px;
+			margin:0 auto;
+			margin-top:80px;
+			background-color:#1c1c1c;
+		}
+		#rightside{
+			float:right;
+			width:340px;
+		}
+		#leftside{
+			width:400px;
+			float:left;
+			height:800px;
+		}
+		#tweet_button{
+			width:460px;
+			height:52px;
+			background-color:#292929;
+			font-size:28px;
+			cursor:pointer;
+			padding: 10px 0 0 0;
+			margin:0 auto;			
+			margin-top:60px;
+			margin-bottom:30px;
+					
+		}
+		
+		#tweet_button_with_arrows{
+			width:460px;
+			height:52px;
+			background-color:#292929;
+			font-size:28px;
+			cursor:pointer;
+			padding: 10px 0 0 0;
+			float:left;	
+					
+		}	
+		#arrows{
+			float:left;
+			width:30px;
+			padding-top:20px;
+			margin: 0 20px 0 20px;
+		}
+
+		#tweet_with_arrows_box{
+			width:610px;
+			margin:0 auto;
+			height:50px;	
+			margin-bottom:30px;
+			margin-top:50px;
+			
+		}
+		#results_container{
+			width:760px;
+			height:770px;
+		}
+
+		#img_container{
+			margin:40px 10px 0px 20px;
+		}
+
+		.button{
+			padding:8px 15px;
+			margin-top:20px;
+			margin-left:10px;
+			background-color:#292929;
+			border:none;
+			font-family:'Gill Sans MT Condensed', Arial, sans-serif;
+			color: #a7adb1;
+			font-size:28px;
+			cursor:pointer;
+		}
+		#bird{
+			width:227px;			
+			margin:0 auto;
+			margin-top:50px;
+			margin-bottom:30px;
+			text-align:center;
+		}
+		#footer{
+			font-size:22px;
+			text-align:center;
+		}
+		a{
+			color:#7698b0;
+			text-decoration:none;
+			font-style:regular;
+		}
+
+		#textentry{
+			background-color:#a7adb1;
+			border:none;
+			color:#1c1c1c;
+			font-family:'Gill Sans MT Condensed', Arial, sans-serif;
+			font-size:28px;
+			height:46px;
+			width:185px;
+			padding-left:10px;
+		}
+
+		#headliner{
+			margin:0;
+			padding:0;
+			width:100%;
+			height:164px;		
+		}		
+		#stat{
+			float:left;			
+			margin: 0;
+			padding: 0;			
+			margin-right:20px;
+		}
+		
+		#number{
+			float:left;
+			margin:0;
+			padding:0;			
+			font-size:130px;
+			margin-right:20px;
+			margin-top:-25px;
+		}
+		
+		#unit{
+			float:left;
+			padding:0;
+			margin:0;			
+			font-size:30px;
+			margin-top:66px;
+		}
+	</style>
+</head>
+<body>
+	<div id="mainbox">
+		{% block body %}{% endblock %}
+	</div>
+	<div id="footer">
+		<img src="/static/bird.png" id="bird">
+		<p style="padding-bottom:80px;">created by <a href="http://www.twitter.com/cgallello">@cgallello</a></p>
+	</div>
+</body>
+</html>

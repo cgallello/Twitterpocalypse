@@ -1,0 +1,85 @@
+{% extends "layout.html" %}
+{% block body %}
+
+<img src="/static/logo2.png" style="margin-left:40px;">
+<div id="rightside">
+	<h2 style="font-size:200px; margin-top:-30px;margin-left:20px;">    {{ final_percentage }}%</h2>
+</div>	
+<br />
+<a href="http://twitter.com/home?status=I+have+{{ final_percentage }}%25+chance+of+surviving+the+Twitter+zombie+apocalypse%21+http%3A%2F%2Ftwitterpocalypse.com" target="_blank"><div id="tweet_button">
+	<span id="img_container">
+		<img src="/static/bird.png" height="30" style="margin-right:50x;">
+	</span>Tweet your score to infect your friends
+</div></a>
+<div id="results_container">
+		<h3 style="text-align:center;">Let's break it down.</h3>
+		<div id="headliner">
+			<span id="stat">
+				<h1 style="font-size:50px; margin:0;padding:0;">FOLLOWER</h1>
+				<h1 style="font-size:50px;margin:0;padding:0;margin-top:-15px;">RATIO</h1>
+			</span>
+			<span id="number">{{ follower_ratio }}</span>
+			<span id="unit">followers to following</span>
+		</div>
+		<p style="margin-top:-50px; margin-bottom:60px;">
+		{% if chase_ratio > 30 %}
+			You have way more followers than people you follow. Alright cool popular person, this might be good in the normal world, but when the Twitterpocalypse comes, you're going to have way more zombies following you.
+		
+		{% elif chase_ratio > 20 %}
+			You have a lot more followers than people you follow. Sure, being social is good, but not when the people you're social with all turn into zombies!
+		{% elif chase_ratio > 10 %}
+			You have more followers than people you follow. Trust me, it's better to follow others and know what's going on with them than have a ton of people who could all potentially be zombies following you.
+		{% elif chase_ratio > 5 %}	
+			You have fewer followers than people you follow. This might make you lame in the world of social media, but you're in good shape when the Twitterpocalypse comes! Fewer zombies will follow you and hunt you down.
+		{% else %}
+			You have barely anybody following you relative to the number of people you follow! This means that fewer zombies will be following you to hunt you down! You're in great shape here.
+		{% endif %}
+		</p>
+		<div id="headliner">
+			<span id="stat">
+				<h1 style="font-size:50px; margin:0;padding:0;">TWEET</h1>
+				<h1 style="font-size:50px;margin:0;padding:0;margin-top:-15px;">FREQUENCY</h1>
+			</span>
+			<span id="number">{{ loudness_ratio }}</span>
+			<span id="unit">tweets per day</span>
+		</div>
+		<p style="margin-top:-50px; margin-bottom:60px;">
+		{% if loudness > 20 %}
+			You tweet like, a pretty ridiculous amount. Way too often. Keep babbling like that and the zombies will definitely hear you and track you down!
+		{% elif loudness == 20 %}
+			You tweet a lot. Remember, the more you tweet, the more likely the zombies will hear you and track you down!
+		{% elif loudness == 10 %}
+			You tweet fairly often. Not too bad, but the zombies may hear you!
+		{% else %}
+			You don't tweet too often. Maybe that's not so great for your Klout, but at least the zombies won't hear you!
+		{% endif %}</p>
+
+		<div id="headliner">
+			<span id="stat">
+				<h1 style="font-size:50px; margin:0;padding:0;">GEO</h1>
+				<h1 style="font-size:50px;margin:0;padding:0;margin-top:-15px;">LOCATION</h1>
+			</span>
+			<span id="number">{% if geo == 0 %}OFF{% else %}ON{% endif %}</span>
+		</div>
+		<p style="margin-top:-50px; margin-bottom:60px;">
+		{% if geo == 0 %} 
+			The Twitter zombies will have a much harder time finding you. Awesome!
+		{% else %}
+			Why!? You're basically telling the Zombies where you are!
+		{% endif %}
+		</p>
+
+<div id="tweet_with_arrows_box">
+	<img src="/static/arrow_right.png" id="arrows">
+	<a href="http://twitter.com/home?status=I+have+{{ final_percentage }}%25+chance+of+surviving+the+Twitter+zombie+apocalypse%21+http%3A%2F%2Ftwitterpocalypse.com" target="_blank"><div id="tweet_button_with_arrows">
+		<span id="img_container">
+			<img src="/static/bird.png" height="30" style="margin-right:50x;">
+		</span>Tweet your score to infect your friends
+	</div></a>
+	<img src="/static/arrow_left.png" id="arrows">
+</div>
+
+</div>
+
+{% endblock %} 
+

@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+{% block body %}
+
+<body>
+<img src="/static/logo.png">
+<div id="rightside">
+	<form method="post" action="braaaaains">
+		<h4>Enter your Twitter handle below to see how well you stand a chance against the almost-certain zombie apocalypse</h4>
+		<input type="text" id="textentry" name="submitted_user" id="twitterhandle" placeholder="@twittername" required="required" />
+		<input type="submit" class="button" value="Calculate" method="braaaaains" id="submit" />
+	</form>
+	<script>
+		"submit".onClick="function('
+			console.log(twitterhandle)
+		');
+	</script>
+</div>
+{% endblock %} 

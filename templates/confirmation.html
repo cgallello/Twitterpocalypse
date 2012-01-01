@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+{% block body %}
+	<h1>CONFIRMED</h1>
+
+	<p>Once you've connected your Dropbox account with the app, please click the button below:</p>
+	<form method="post" action="confirm">
+		<input type="hidden" name="request_token", value="{{ request_token }}" />
+		<input type="hidden" name="person_id", value="{{ person_id }}" />
+		<input type="submit" value="Confirmed" />
+	</form>
+	
+{% endblock %}
+
+

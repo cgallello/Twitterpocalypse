@@ -1,0 +1,6 @@
+{% extends "layout.html" %}
+{% block body %}
+  <h1 style="margin-top:-20px;">404'd! Page Not Found.</h1>
+  <p style="margin-top:-30px;">The page you're looking for is just not there. Zombies must've gotten to it first.
+  <p><a href="{{ url_for('index') }}">Go home!</a>
+{% endblock %}

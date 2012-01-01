@@ -1,0 +1,32 @@
+$def with (accounts, submitted, url, access_token)
+
+	<table>
+	$for account in accounts:
+		<tr>
+			<td>$account.app_key</td>
+			<td>$account.app_secret</td>
+			<td>$account.access_token</td>
+			<td>$account.access_secret</td>
+			<td>$account.kindle_email</td>
+			<td>$account.personal_email</td>
+			<td>$account.created</td>
+		</tr>
+	</table>
+	
+	$if submitted==True:
+		<form method="post" action="confirm">
+			<input type="submit" value="Confirmed" />
+		</form>
+
+	$if not access_token == None:
+		<p>$access_token</p>
+
+	<form method="post" action="add">
+	<p>Kindle email:</p>
+	<p><input type="text" name="kindle_email" /></p>
+
+	<p>Personal email*:</p>
+	<p><input type="text" name="personal_email" /><input type="submit" value="Add" onclick="window.open('$url', width=400, height=300)"/></p>
+	
+	<p>*Optional. If you submit your email address, bla blabla</p>
+	</form>
